@@ -25,7 +25,7 @@
 
 if [ 1 -eq 0 ]; then    # This is never true, thus it acts as block comments ;)
 ### One liner - Grab the latest version and execute! ###########################
-wget -qO- https://raw.github.com/g0tmi1k/os-scripts/master/kali.sh | bash
+wget -qO- https://raw.github.com/rkornmeyer/os-scripts/master/kali.sh | bash
 ## Shorten URL >>>  wget -qO- http://bit.do/postkali | bash  <<<
 #curl -s -L -k https://raw.github.com/g0tmi1k/kali-postinstall/master/kali_postinstall.sh | nohup bash
 ################################################################################
@@ -33,9 +33,9 @@ fi
 
 
 ##### Location information
-keyboardApple=false         # Using a Apple/Macintosh keyboard? Change to anything other than 'false' to enable
-keyboardlayout="gb"         # Great Britain
-timezone="Europe/London"    # London, Europe
+keyboardApple=True         # Using a Apple/Macintosh keyboard? Change to anything other than 'false' to enable
+keyboardlayout="us"         # United States
+timezone="America/New_York"    # New York, America
 
 
 ##### (Optional) Enable debug mode?
@@ -1646,8 +1646,8 @@ apt-get -y -qq install bless
 
 
 ##### Installing openvas
-echo -e "\n$GREEN[+]$RESET Installing openvas ~ vulnerability scanner"
-apt-get -y -qq install openvas
+#echo -e "\n$GREEN[+]$RESET Installing openvas ~ vulnerability scanner"
+#apt-get -y -qq install openvas
 #openvas-setup   #*** Doesn't automate
 #--- Remove 'default' user (admin), and create a new admin user (root).
 #test -e /var/lib/openvas/users/admin && openvasad -c remove_user -n admin
